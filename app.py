@@ -17,10 +17,7 @@ def login_required(f):
             return redirect(url_for('login'))
     return wrap
 
-# use decorators to link teh function to a url
-
-
-
+# use decorators to link the function to a url
 # called key in login page, login required object will catch it, flashes message to log in
 @app.route('/', methods =['GET'])
 # If user sends a Git request to index page and not logged in, meaning not key
