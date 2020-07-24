@@ -46,11 +46,14 @@ def login():
             if attempt == 3:
                 abort(404)
             else:
+                # during each login attempt, the counter increases
                 attempt += 1
                 session['attempt'] = attempt
+                # prints the message
                 error = 'Invalid Credentials. Please try again.'
         else:
             session['logged_in'] = True
+            # Flask provides a really simple way to give feedback to a user with the flashing system.
             flash('You were just logged in')
             return redirect(url_for('home'))
     return render_template('login.html', error=error)
