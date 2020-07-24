@@ -46,3 +46,36 @@ def login():
             return redirect(url_for('home'))
     return render_template('login.html', error=error)
 ```
+
+Template inheritanec was incorporated into the project
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask Intro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+  </head>
+  <body>
+
+    <div class="container">
+
+      <!-- child template -->
+      {% block content %}{% endblock %}
+
+      <!-- errors -->
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}</p>
+      {% endif %}
+
+      <!-- messages -->
+      {% for message in get_flashed_messages() %}
+        {{ message }}
+      {% endfor %}
+    </div>
+
+  </body>
+</html>
+```
+A base template was used as the parent class, then login, index and welcome were child classes of this 
