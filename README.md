@@ -28,14 +28,17 @@ def login():
     if request.method == 'POST':
         if request.form['username'] != 'Marwai' or request.form['password'] != 'password':
             attempt = session.get('attempt')
+            # During second attempt, the penultimate attempt will flash a message stating "one attempt remaining" 
             if int(attempt) == 2:
                 flash("One attempt remaining")
-            # if attempt == 0:
+            # If the third and final attempt is a failure, then the page is sent to an error page 
             if attempt == 3:
                 abort(404)
+            # After every attempt the counter is increased by 1 
             else:
                 attempt += 1
                 session['attempt'] = attempt
+                # error message is printed 
                 error = 'Invalid Credentials. Please try again.'
         else:
             session['logged_in'] = True
