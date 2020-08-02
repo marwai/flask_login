@@ -1,17 +1,13 @@
 # Flask Web Page Application 
-Flask is a lightweight Web Server Gateway Interface (WSGI) web application framework. It is designed to make getting 
-started quick and easy; with the ability to scale up to complex applications. It doesn't come with any built packages. 
+- Flask is a lightweight Web Server Gateway Interface (WSGI) web application framework.
+- It is designed to make getting started quick and easy
+- Ability to scale up to complex applications. It doesn't come with any built packages. 
+- Microframework because it does not require particular tools or libraries 
 
-It is very beneficial 
+## Web is a web framework? 
+Web framework is a collection of libraries and modules that enable web application developers to write applications
 
-Advantages:
-- Scalability -  
-- Simple Development - Requires Knowledge of Python 
-- Flexibility - They are few parts that cannot be easily and safely altered because of is simplicity and minimality  
-- Performance - Few levels of abstraction between you, database, requests, cache etc. 
-- Modularity -
-
-# Acceptance Criteria
+## Acceptance Criteria
 * User must be able to login with username and password
 * be directed to homepage/index.html if unsuccessful redirected to error page 
 404/customised page with message of your choice
