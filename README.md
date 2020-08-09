@@ -4,7 +4,7 @@
 - Ability to scale up to complex applications. It doesn't come with any built packages. 
 - Microframework because it does not require particular tools or libraries 
 
-## Web is a web framework? 
+## What is a web framework? 
 Web framework is a collection of libraries and modules that enable web application developers to write applications
 
 ## Acceptance Criteria
